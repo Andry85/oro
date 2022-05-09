@@ -1,0 +1,83 @@
+parameters:
+    database_driver:        pdo_pgsql
+    database_host:          '%env(ORO_DB_HOST)%'
+    database_port:          '%env(ORO_DB_PORT)%'
+    database_name:          '%env(ORO_DB_NAME)%'
+    database_user:          '%env(ORO_DB_USER)%'
+    database_password:      '%env(ORO_DB_PASSWORD)%'
+    database_server_version: '%env(ORO_DB_VERSION)%'
+    database_driver_options: []
+
+    mailer_dsn:             '%env(ORO_MAILER_DSN)%'
+
+    # WebSocket server config
+    websocket_bind_address:                "0.0.0.0"  # The host IP the socket server will bind to
+    websocket_bind_port:                   8080       # The port the socket server will listen on
+    websocket_frontend_host:               "*"        # Websocket host the browser will connect to
+    websocket_frontend_port:               8080       # Websocket port the browser will connect to
+    websocket_frontend_path:               ""         # Websocket url path the browser will connect to (for example "/websocket" or "/ws")
+    websocket_backend_host:                "*"        # Websocket host the application server will connect to
+    websocket_backend_port:                8080       # Websocket port the application server will connect to
+    websocket_backend_path:                ""         # Websocket url path the application server will connect to (for example "/websocket" or "/ws")
+    websocket_backend_transport:           tcp        # Socket transport (for example "tcp", "ssl" or "tls")
+    websocket_backend_ssl_context_options: {}         # Socket context options, usually needed when using secure transport
+
+    # search engine configuration
+    search_engine_name:                 orm
+    search_engine_host:                 '%env(ORO_SEARCH_HOST)%'
+    search_engine_port:                 '%env(ORO_SEARCH_PORT)%'
+    search_engine_index_prefix:         '%env(ORO_SEARCH_INDEX_PREFIX)%'
+    search_engine_username:             '%env(ORO_SEARCH_USER)%'
+    search_engine_password:             '%env(ORO_SEARCH_PASSWORD)%'
+    search_engine_ssl_verification:     '%env(ORO_SEARCH_ENGINE_SSL_VERIFICATION)%'
+    search_engine_ssl_cert:             '%env(ORO_SEARCH_ENGINE_SSL_CERT)%'
+    search_engine_ssl_cert_password:    '%env(ORO_SEARCH_ENGINE_SSL_CERT_PASSWORD)%'
+    search_engine_ssl_key:              '%env(ORO_SEARCH_ENGINE_SSL_KEY)%'
+    search_engine_ssl_key_password:     '%env(ORO_SEARCH_ENGINE_SSL_KEY_PASSWORD)%'
+
+    # website search engine configuration
+    website_search_engine_index_prefix: '%env(ORO_SEARCH_WEBSITE_INDEX_PREFIX)%'
+
+    # Used to hide backend under specified prefix, should be started with "/", for instance "/admin"
+    web_backend_prefix:         '/admin'
+
+    session_handler:        ~
+
+    secret:                 '%env(ORO_SECRET)%'
+
+    enterprise_licence: ~
+    message_queue_transport: 'null'
+    message_queue_transport_config: {}
+    profiler.enabled: false
+    enable_price_sharding: '%env(bool:ORO_ENABLE_PRICE_SHARDING)%'
+
+    deployment_type: ~
+
+    # Post processors binary
+    liip_imagine.jpegoptim.binary: null
+    liip_imagine.pngquant.binary: null
+
+    # Fallback values (used if environmental variables are not set)
+    env(ORO_DB_HOST): 127.0.0.1
+    env(ORO_DB_PORT): null
+    env(ORO_DB_NAME): b2b_crm_ee_dev_test
+    env(ORO_DB_USER): root
+    env(ORO_DB_PASSWORD): null
+    env(ORO_DB_VERSION): null
+
+    env(ORO_MAILER_DSN): 'smtp://127.0.0.1'
+
+    env(ORO_SEARCH_HOST): 127.0.0.1
+    env(ORO_SEARCH_PORT): null
+    env(ORO_SEARCH_INDEX_PREFIX): oro_search_test
+    env(ORO_SEARCH_USER): null
+    env(ORO_SEARCH_PASSWORD): null
+    env(ORO_SEARCH_ENGINE_SSL_VERIFICATION): null
+    env(ORO_SEARCH_ENGINE_SSL_CERT): null
+    env(ORO_SEARCH_ENGINE_SSL_CERT_PASSWORD): null
+    env(ORO_SEARCH_ENGINE_SSL_KEY): null
+    env(ORO_SEARCH_ENGINE_SSL_KEY_PASSWORD): null
+    env(ORO_SEARCH_WEBSITE_INDEX_PREFIX): oro_website_search_test
+
+    env(ORO_SECRET): ThisTokenIsNotSoSecretChangeIt
+    env(ORO_ENABLE_PRICE_SHARDING): '0'
