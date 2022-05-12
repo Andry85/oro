@@ -1,0 +1,9 @@
+.button {
+    display: inline-block;
+    padding: $button-padding;
+    font-size: $font-size;
+    font-family: $button-font-family;
+    line-height: $button-line-height;
+    border: $border;
+    color: $button-color;
+}

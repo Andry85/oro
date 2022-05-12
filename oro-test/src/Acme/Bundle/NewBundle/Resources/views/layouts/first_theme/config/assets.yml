@@ -1,0 +1,9 @@
+styles:
+ inputs:
+    - 'bundles/acmenew/first_theme/scss/base/base.scss'
+    - 'bundles/acmenew/first_theme/scss/settings/global-settings.scss'
+    - 'bundles/acmenew/first_theme/scss/variables/button-config/button-config.scss'
+    - 'bundles/acmenew/first_theme/scss/variables/input-config/input-config.scss'
+    - 'bundles/acmenew/first_theme/scss/styles.scss'
+    
+ output: css/styles.css

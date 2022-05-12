@@ -1,0 +1,8 @@
+layout:
+ actions:
+     - '@add':
+           parentId: middle_bar_logo
+           id: slogan
+           blockType: text
+           options:
+               text: Website Slogan!

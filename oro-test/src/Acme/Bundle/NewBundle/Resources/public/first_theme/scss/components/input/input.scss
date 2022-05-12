@@ -1,0 +1,9 @@
+.input {
+    display: inline-block;
+    padding: $input-padding;
+    font-size: $font-size;
+    font-family: $input-font-family;
+    line-height: $input-line-height;
+    border: $border;
+    color: $input-color;
+}
